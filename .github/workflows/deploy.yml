@@ -20,13 +20,13 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
     - name: Cypress tests
-       uses: cypress-io/github-action@v3
-       with:
-          project: .
-          browser: chrome
-          build: npm build
-          start: npm start
-          wait-on: "http://localhost:3000"
+      uses: cypress-io/github-action@v3
+      with:
+        project: .
+        browser: chrome
+        build: npm build
+        start: npm start
+        wait-on: "http://localhost:3000"
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
       with:
