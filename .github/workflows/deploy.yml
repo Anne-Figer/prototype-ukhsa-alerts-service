@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
     - name: Cypress tests
-      uses: cypress-io/github-action@v3
+      uses: cypress-io/github-action@v4
       with:
         project: .
         browser: chrome
