@@ -10,7 +10,9 @@
     "start": "node start",
     "build": "node lib/build/generate-assets",
     "serve": "node listen-on-port",
-    "test": "jest"
+    "test": "jest",
+    "migrate:up": "npx sequelize-cli db:migrate",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo"
   },
   "dependencies": {
     "@govuk-prototype-kit/step-by-step": "^2.0.0",
