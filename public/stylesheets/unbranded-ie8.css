@@ -4971,20 +4971,16 @@ x:-moz-any-link {
   left: 0.375rem;
   width: 0.375rem;
   height: 0.375rem;
-  -webkit-transform: rotate(-45deg);
-  /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
-  -ms-transform: rotate(-45deg);
-  /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  -ms-transform: rotate(-45deg); /* IE 9 */
   transform: rotate(-45deg);
   border-top: 0.125rem solid;
   border-right: 0.125rem solid;
 }
 
 .app-step-nav__chevron--down {
-  -webkit-transform: rotate(180deg);
-  /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
-  -ms-transform: rotate(180deg);
-  /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  -ms-transform: rotate(180deg); /* IE 9 */
   transform: rotate(180deg);
 }
 

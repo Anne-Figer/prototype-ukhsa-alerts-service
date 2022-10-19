@@ -39,15 +39,19 @@
     "nodemon": "^2.0.15",
     "notifications-node-client": "^5.1.0",
     "nunjucks": "^3.2.1",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
     "portscanner": "^2.1.1",
     "require-dir": "^1.0.0",
     "sass": "^1.49.10",
+    "sequelize": "^6.25.3",
     "sync-request": "^6.0.0",
     "universal-analytics": "^0.5.3",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
     "jest": "^29.2.1",
+    "sequelize-cli": "^6.5.1",
     "supertest": "^6.3.0"
   }
 }
