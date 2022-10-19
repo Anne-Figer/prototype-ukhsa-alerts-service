@@ -3,3 +3,4 @@ node_modules/
 .tmp
 .port.tmp
 cypress/videos
+.DS_Store

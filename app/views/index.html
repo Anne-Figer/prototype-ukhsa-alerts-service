@@ -9,15 +9,29 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
+        <img class="govuk-body govuk-!-margin-bottom-3" src="/public/images/UKHSA_Logo.jpeg" alt="UK HSA logo" width="150">
+      
+      <!-- <h1 class="govuk-heading-xl">
         Prototype your service using GOV.UK Prototype Kit
         <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+      </h1>{{releaseVersion | log }} -->
+        {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
-      <p>
+        {% set html %}
+          <p class="govuk-notification-banner__heading">
+            Long term planning for cold weather
+          </p>
+          <p>In anticipation of significant cold periods, year round planning is necessary. Social and healthcare services undertake planning year round to ensure they are prepared for extreme weather events.
+          </p>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          classes: 'govuk-notification-banner-level-0',
+          titleText: 'Alert level 0'
+        }) }}
+
+      <!-- <p>
         It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
       </p>
 
@@ -37,7 +51,7 @@
         <li>
           <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 
