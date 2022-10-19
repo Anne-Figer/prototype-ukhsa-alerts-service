@@ -19,6 +19,9 @@ module.exports = {
     "password": process.env.DBPASS,
     "database": process.env.DBNAME,
     "host":  process.env.DBHOST,
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "dialectOptions": {
+      encrypt: true
+    }
   }
 }
