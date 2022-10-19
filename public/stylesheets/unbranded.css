@@ -8532,3 +8532,8 @@ x:-moz-any-link {
     margin-bottom: 0;
   }
 }
+
+.govuk-notification-banner-level-0 {
+  border-color: #00703c;
+  background-color: #00703c;
+}
