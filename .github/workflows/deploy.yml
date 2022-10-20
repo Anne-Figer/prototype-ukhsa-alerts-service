@@ -18,7 +18,7 @@ jobs:
       postgres:
         image: postgres:14
         env:
-          POSTGRES_PASSWORD: ${{ secrets.DBUSER }}
+          POSTGRES_PASSWORD: ${{ secrets.DBPASS }}
           POSTGRES_USER: ${{ secrets.DBUSER }}
           POSTGRES_DB: ${{ secrets.DBNAME }}
         ports:
@@ -31,6 +31,7 @@ jobs:
           --health-retries 5
 
     env:
+      DBHOST: localhost
       DBPASS: ${{ secrets.DBPASS }}
       DBUSER: ${{ secrets.DBUSER }}
       DBNAME: ${{ secrets.DBNAME }}
@@ -45,6 +46,7 @@ jobs:
       run: |
         npm install
         npm run build --if-present
+        npm run migrate:up --if-present
         npm run test --if-present
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2

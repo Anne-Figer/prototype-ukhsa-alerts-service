@@ -27,7 +27,6 @@ describe("Signup post", () => {
         } catch (err) {
             console.log(`Error ${err}`)
         }
-        return {}
     });
 })
 
