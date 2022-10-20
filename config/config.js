@@ -21,7 +21,9 @@ module.exports = {
     "host":  process.env.DBHOST,
     "dialect": "postgres",
     "dialectOptions": {
-      encrypt: true
+      "ssl": {
+        "require": true
+      }
     }
   }
 }
