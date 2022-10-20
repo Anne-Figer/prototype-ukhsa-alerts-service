@@ -13,6 +13,6 @@ router.get('/users', function (req, res) {
         res.send(users) 
     })
     .catch((err) => {
-      return res.send(err)
+        return res.send(err)
     });
-  })
+})
