@@ -16,3 +16,8 @@ router.get('/users', function (req, res) {
         return res.send(err)
     });
 })
+
+router.post('/signup', async function (req, res) {
+    const user = await User.create({ email: req.params.email });
+    res.render('index');
+})
