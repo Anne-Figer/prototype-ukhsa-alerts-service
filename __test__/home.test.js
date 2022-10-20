@@ -19,4 +19,13 @@ describe("Test GET /", () => {
         done();
       });
   });
+
+  test("It should display an alert level", done => {
+    request(app)
+      .get("/")
+      .then(response => {
+        expect(response.text).toContain("Alert level");
+        done();
+      });
+  });
 });
