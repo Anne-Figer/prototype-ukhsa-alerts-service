@@ -27,5 +27,10 @@ describe("Signup post", () => {
         } catch (err) {
             console.log(`Error ${err}`)
         }
+        return {}
     });
 })
+
+afterAll(async() => {
+    await User.sequelize.close();
+});
