@@ -21,7 +21,7 @@ router.get('/users', function (req, res) {
 })
 
 router.post('/signup', async function (req, res) {
-    const user = await User.create({ email: req.params.email });
+    const user = await User.create({ email: req.body.email });
     res.render('index');
 })
 
