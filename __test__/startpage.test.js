@@ -11,12 +11,4 @@ describe("Test GET /", () => {
       });
   });
 
-  test("It should have the correct header", done => {
-    request(app)
-      .get("/")
-      .then(response => {
-        expect(response.text).toContain("UKHSA Temperature Alerts");
-        done();
-      });
-  });
 });
