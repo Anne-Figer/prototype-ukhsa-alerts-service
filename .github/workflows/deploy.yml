@@ -31,6 +31,7 @@ jobs:
           --health-retries 5
 
     env:
+      DBHOST: localhost
       DBPASS: ${{ secrets.DBPASS }}
       DBUSER: ${{ secrets.DBUSER }}
       DBNAME: ${{ secrets.DBNAME }}
