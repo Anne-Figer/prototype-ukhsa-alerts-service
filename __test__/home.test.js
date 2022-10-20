@@ -2,6 +2,7 @@ const request = require("supertest");
 const app = require('../server.js')
 
 describe("Test GET /", () => {
+  
   test("It should return OK", done => {
     request(app)
       .get("/")
@@ -28,4 +29,13 @@ describe("Test GET /", () => {
         done();
       });
   });
+
+  test("It should contain a link to the start page", done => {
+    request(app)
+      .get("/")
+      .then(response => {
+        expect(response.text).toContain('<a href="/startpage" role="button" draggable="false" class="govuk-button" data-module="govuk-button">Sign up to alerts</a>');
+        done();
+      });
+    });
 });
