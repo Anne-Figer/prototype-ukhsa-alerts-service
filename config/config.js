@@ -13,7 +13,7 @@ module.exports = {
     "database": process.env.DBNAME,
     "host":  process.env.DBHOST,
     "dialect": "postgres",
-    "logging": false
+    "logging": false,
   },
   "production": {
     "username": process.env.DBUSER,

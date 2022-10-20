@@ -18,7 +18,7 @@ jobs:
       postgres:
         image: postgres:14
         env:
-          POSTGRES_PASSWORD: ${{ secrets.DBUSER }}
+          POSTGRES_PASSWORD: ${{ secrets.DBPASS }}
           POSTGRES_USER: ${{ secrets.DBUSER }}
           POSTGRES_DB: ${{ secrets.DBNAME }}
         ports:
